@@ -31,4 +31,21 @@ If the browser doesn't support service workers the navigator.serviceWorker value
 
 ## Event Listeners
 
+The service worker receives events and therefore we can add `eventListeners` to the service worker in order to complete certain tasks. 
+
+### Fetch Event Listener
+
+When the user navigates to a page within the service worker's scope, it controlls the page's actions. The network's request for the HTML goes to the service worker and triggers a `fetch` event. But that doesn't happen only for the HTML, a `fetch` event is triggered for every request sent by that page (Ie. images, css, js, etc).
+
+Adding the fetch event listener to the service worker:
+
+``` javascript
+  self.addEventListener('fetch', function(event) {
+    // do something
+  });
+```
+self here refers to the service worker object. Once a `fetch` event is triggered we can access that returned data and interact with it.
+
+
+## Service Worker Lifecycle
 
