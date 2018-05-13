@@ -7,6 +7,7 @@
 3. Event Listeners
 4. Service Workers Lifecycle
 5. Hijacking Requests
+6. Caching and Serving Assets
 
 
 ## 1. Useful Links & Materials
@@ -111,6 +112,66 @@ self.addEventListener('fetch', function(event) {
   );
 }
 ```
+
+## Caching and Serving Assets
+
+[The Cache API - MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+
+The Cache API gives us the global caches object. 
+
+### To Create or Open a New Cache
+`caches.open('name-of-cache').then(function(cache) { //do something })`
+
+`caches.open` returns a promise for a cache of that name, if this cache hasn't been opened before, it creates it and then returns the promise.
+
+The cache "box" contains request/response pairs from any secure origin. It can be used to store almost anything (Ie. fonts, scripts, images, etc) from both our origin (server) as well as elsewhere on the web (we can cache remote resources like google fonts for instance).
+
+### Adding to the Cache
+
+We can add resources to the cache by using: 
+
+`cache.put(request, response);`
+
+or 
+
+```javascript
+cache.addAll([
+  '/',
+  'locationOne/',
+  'locationTwo/'
+])
+```
+
+`cache.addAll([])` takes an array of requests or URL's of resources to be added to the cache.
+ 
+Note: If any of the requests in `cache.addAll` fails to cache none of them will be added, the whole request fails. This method uses `fetch` under the hood, so the requests will go via the browser cache.
+
+### Retrieve from the Cache
+
+In order to retrieve something from the cache, we can call: 
+
+``` javascript
+  cache.match('request');
+```
+We should pass in a request or a URL. This will return a promise for a matching response if one is found or return null otherwise.
+
+`caches.match('request');` does the same, however it tries to find a match in any cache, starting with the oldest.
+
+### When should we use the cache?
+
+Usually the cache is initialized during the install event of the service worker. When the service worker is registered it triggers an install event and we can listen to that event and react to it. 
+
+```javascript
+  self.addEventListener('install', event => {
+    event.waitUntil(
+      //promise
+    );
+  });
+```
+
+### Updating a Static Cache
+
+`event.waitUntil` lets us signal the progress of the intall. We pass it a promise, if and when the promise resolves, the browser knows the install is complete, if the promise rejects, it knows the install has failed.
 
 ## Triggering an Update
 
