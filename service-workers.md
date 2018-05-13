@@ -84,4 +84,4 @@ self.addEventListener('fetch', function(event) {
 
 ## Triggering an Update
 
-[Documentation on `self.skipWaiting();`] (https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase "Google Documentataion")
+[Documentation on `self.skipWaiting();`](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase "Google Documentataion")
