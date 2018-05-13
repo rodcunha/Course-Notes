@@ -96,6 +96,21 @@ self.addEventListener('fetch', function(event) {
   );
 }
 ```
+We can also respond with a promise that resolves as a response as such:
+
+``` javascript
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    fetch('https://www.someurl.com/myImage.jpg')
+      .then( () => {
+        //do something
+      })
+      .catch( err => {
+        //do something
+      })
+  );
+}
+```
 
 ## Triggering an Update
 
