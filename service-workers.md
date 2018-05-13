@@ -169,9 +169,12 @@ Usually the cache is initialized during the install event of the service worker.
   });
 ```
 
+`event.waitUntil` lets us signal the progress of the intall. We pass it a promise, if and when the promise resolves, the browser knows the install is complete, if the promise rejects, it knows the install has failed.
+
 ### Updating a Static Cache
 
-`event.waitUntil` lets us signal the progress of the intall. We pass it a promise, if and when the promise resolves, the browser knows the install is complete, if the promise rejects, it knows the install has failed.
+to do
+
 
 ## Triggering an Update
 
