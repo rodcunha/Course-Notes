@@ -49,3 +49,10 @@ self here refers to the service worker object. Once a `fetch` event is triggered
 
 ## Service Worker Lifecycle
 
+After registering a service worker the first browser refresh will fetch the service worker, however even though the new js with the registration of the service worker was read and the service worker is a part of the document it isn't yet active and therefore all requests made by the page will bypass the service worker. Only when the browser is refreshed a second time will the service worker start intercepting network requests. 
+
+If a change is made to the service worker, the next request will trigger a new version of the service worker, this will not be active until ALL windows running the previous version have exited. Refreshing the page will not help here as there is an overlap and the window isn't exactly active, you will need to navigate out of the webpage so that the new version of the service worker will take over. This happens so that the website displays a consistent version to every user accessing it. 
+
+It is possible during development to setup the browser so that the service worker updates with each refresh, this can be done on the application tab of the developer tools in chrome. 
+
+##
