@@ -12,8 +12,8 @@
 
 ## 1. Useful Links & Materials
 
-[Google Course on Progressive Web Apps - Youtube](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAdnzEsWkg0KpMn2WJwMBmN)
-[Google PWA Course - Google Developers](https://developers.google.com/web/ilt/pwa/)
+- [Google Course on Progressive Web Apps - Youtube](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAdnzEsWkg0KpMn2WJwMBmN)
+- [Google PWA Course - Google Developers](https://developers.google.com/web/ilt/pwa/)
 
 
 ## 2. Registering a service worker
