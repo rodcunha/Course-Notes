@@ -1,5 +1,12 @@
 # CSS Grid Notes
 
+## Contents
+
+1. What is CSS Grid
+2. How to use CSS Grid
+3. Template Areas
+4. Conclusion
+
 ## What is CSS Grid
 
 CSS grid is a relatively new CSS layout technique that allows us to define columns and rows directly in the CSS without the use of an external framework.
@@ -150,3 +157,4 @@ In order to add space between grid element we will need to use `grid-gap` as suc
 
 This will add a `10px` spacing between the grid elements, both columns and rows. In order to define the gaps just for columns or rows, we can use `grid-column-gap` or `grid-row-gap` instead.
 
+## Grid template Areas
