@@ -37,5 +37,6 @@ In order to add space between grid element we will need to use `grid-gap` as suc
 .container {
   grid-gap: 10px;
 }
+```
 
 This will add a `10px` spacing between the grid elements, both columns and rows. In order to define the gaps just for columns or rows, we can use `grid-column-gap` or `grid-row-gap` instead.
