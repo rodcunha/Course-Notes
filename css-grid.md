@@ -89,10 +89,13 @@ This is how we achieve that:
 
 ```css
 .item2 {
-  grid-column-start: 3 span 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 ``` 
-On the example above the element will start on the third track and span a width of 2 columns.
+On the example above the element will start on the third track and span a width of 2 columns ending on track number 5. We can also achieve this with a shorthand declaration as such: 
+
+`grid-column: 3 / 5;` or this `grid-column: span 2 / 5; ` or this `grid-column: 3 / span 2; `
 
 
 ### Adding space between grid elements
