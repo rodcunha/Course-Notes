@@ -79,6 +79,27 @@ In order to span rows, we could use the `grid-row: span 2;` css directive.
 
 **Note:** if the width of the column is greater than the width available the item will wrap onto the next row and leave a gap unless the dense option is used.
 
+#### auto-fill/auto-fit
+
+`auto-fill && auto-fit` seem to initially do the same thing, they will automatically fit the new elements to the container's size, however when the container is too large for the number of elements, auto-fill will keep adding grid columns/rows with the defined size whereas auto-fit will end at the last element and will not add new grid "cells" let's call it that way after.
+
+#### minmax 
+
+`minmax` is probably the best thing about css grid, at least for me it is. This brings responsiveness to a whole new level and can even replace a lot of media queries in the css.
+
+```css
+.my-div {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+```
+
+In the code above we define a `my-div` element that displays as a grid, the grid will repeat its collumns and auto-fill the available space with columns with a minimum widht of 200px and a maximum of 1 fraction.
+
+`minmax()` takes 2 arguments, the minimum and maximum width/heitght.
+
+
 ### Positioning
 
 We are not limited to the default positioning of the grid element, the grid is divided in tracks, the first being the initial line and the last being the one straight after the last grid column/row. This means the number of tracks will always be 1 number higher than the number of columns/rows declared (or implicit). These tracks are numberered and we can use these numbers to position the elements on the grid.
