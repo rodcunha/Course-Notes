@@ -64,7 +64,7 @@ We can use the repeat function anywhere in the declaration it doesn't need to be
 
 ### Sizing 
 
-### span
+#### span
 
 We can define the width of a column by using the `span` directive on an item. Let's imagine we have a series of `div` elements and we want one of them to be twice the width of the rest. We could achieve that by:
 
@@ -78,6 +78,21 @@ This would make the item with `class="item2"` to span the width of 2 columns. We
 In order to span rows, we could use the `grid-row: span 2;` css directive.
 
 **Note:** if the width of the column is greater than the width available the item will wrap onto the next row and leave a gap unless the dense option is used.
+
+### Positioning
+
+We are not limited to the default positioning of the grid element, the grid is divided in tracks, the first being the initial line and the last being the one straight after the last grid column/row. This means the number of tracks will always be 1 number higher than the number of columns/rows declared (or implicit). These tracks are numberered and we can use these numbers to position the elements on the grid.
+
+#### grid-column-start
+
+This is how we achieve that:
+
+```css
+.item2 {
+  grid-column-start: 3 span 2;
+}
+``` 
+On the example above the element will start on the third track and span a width of 2 columns.
 
 
 ### Adding space between grid elements
