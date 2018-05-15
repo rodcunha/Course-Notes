@@ -83,7 +83,7 @@ In order to span rows, we could use the `grid-row: span 2;` css directive.
 
 We are not limited to the default positioning of the grid element, the grid is divided in tracks, the first being the initial line and the last being the one straight after the last grid column/row. This means the number of tracks will always be 1 number higher than the number of columns/rows declared (or implicit). These tracks are numberered and we can use these numbers to position the elements on the grid.
 
-#### grid-column-start
+#### grid-column-start / grid-row-start 
 
 This is how we achieve that:
 
@@ -96,6 +96,12 @@ This is how we achieve that:
 On the example above the element will start on the third track and span a width of 2 columns ending on track number 5. We can also achieve this with a shorthand declaration as such: 
 
 `grid-column: 3 / 5;` or this `grid-column: span 2 / 5; ` or this `grid-column: 3 / span 2; `
+
+If we want an item to span across the whole screen or to span until the last column, we can use use -1 to symbolize that as such:
+
+`grid-column: 1 / -1` this will result in an element spanning from the first column to the last of the grid similarly to say "width:100%".
+
+All the above is also applicable to rows, replace columns by rows on the css directive.
 
 
 ### Adding space between grid elements
