@@ -53,6 +53,15 @@ To achieve the same layout as above we would then write:
 ```
 You can also use repeat with more than one value, for instance: `grid-template-columns: repeat(6, 1fr 2fr);`. This will alternate columns between 1 fraction and 2 fractions of the available space in the container 6 times.
 
+We can use the repeat function anywhere in the declaration it doesn't need to be standalone for example this is a valid CSS statement:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 100px) 200px 1fr 2rem;
+}
+```
+
 ### Adding space between grid elements
 
 In order to add space between grid element we will need to use `grid-gap` as such:
