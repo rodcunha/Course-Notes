@@ -77,6 +77,8 @@ This would make the item with `class="item2"` to span the width of 2 columns. We
 
 In order to span rows, we could use the `grid-row: span 2;` css directive.
 
+**Note: ** if the width of the column is greater than the width available the item will wrap onto the next row and leave a gap unless the dense option is used.
+
 
 ### Adding space between grid elements
 
