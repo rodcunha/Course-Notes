@@ -31,6 +31,28 @@ In the example above we define a grid element with 3 columns. We can use any val
 
 We can also use `auto` sizing, meaning that the content of the element will defacto determine the size of the grid element (and subsequent elements in that column/row).
 
+#### Using repeat()
+
+We can define columns by giving them their individual values like so:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+}
+```
+But what if we want to define say 10 columns, this quickly becomes tedious. Fortunately, the nice people that created this, gave us an option to quickly add columns. Queue in the repeat function.
+
+To achieve the same layout as above we would then write:
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+```
+You can also use repeat with more than one value, for instance: `grid-template-columns: repeat(6, 1fr 2fr);`. This will alternate columns between 1 fraction and 2 fractions of the available space in the container 6 times.
+
 ### Adding space between grid elements
 
 In order to add space between grid element we will need to use `grid-gap` as such:
