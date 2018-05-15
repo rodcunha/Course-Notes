@@ -83,7 +83,7 @@ In order to span rows, we could use the `grid-row: span 2;` css directive.
 
 `auto-fill && auto-fit` seem to initially do the same thing, they will automatically fit the new elements to the container's size, however when the container is too large for the number of elements, auto-fill will keep adding grid columns/rows with the defined size whereas auto-fit will end at the last element and will not add new grid "cells" let's call it that way after.
 
-#### minmax 
+#### minmax()
 
 `minmax` is probably the best thing about css grid, at least for me it is. This brings responsiveness to a whole new level and can even replace a lot of media queries in the css.
 
@@ -99,6 +99,18 @@ In the code above we define a `my-div` element that displays as a grid, the grid
 
 `minmax()` takes 2 arguments, the minimum and maximum width/heitght.
 
+#### fit-content()
+
+Fit content is a css function that allows us to define the maximum content widht/height of an element. The content will be auto but only up until a certain defined size. We use this similarly to `minmax()`.
+
+```css
+.my-div {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr fit-content(880px) 1fr;
+}
+
+The example above will expand the center column to a maximum width of 880px but not expand past that value.
 
 ### Positioning
 
