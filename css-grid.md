@@ -109,6 +109,7 @@ Fit content is a css function that allows us to define the maximum content widht
   grid-gap: 10px;
   grid-template-columns: 1fr fit-content(880px) 1fr;
 }
+```
 
 The example above will expand the center column to a maximum width of 880px but not expand past that value.
 
