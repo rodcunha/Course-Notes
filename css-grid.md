@@ -62,6 +62,22 @@ We can use the repeat function anywhere in the declaration it doesn't need to be
 }
 ```
 
+### Sizing 
+
+### span
+
+We can define the width of a column by using the `span` directive on an item. Let's imagine we have a series of `div` elements and we want one of them to be twice the width of the rest. We could achieve that by:
+
+```css
+.item2 {
+  grid-column: span 2;
+}
+``` 
+This would make the item with `class="item2"` to span the width of 2 columns. We can add more width by increasing the number and make it span more columns.
+
+In order to span rows, we could use the `grid-row: span 2;` css directive.
+
+
 ### Adding space between grid elements
 
 In order to add space between grid element we will need to use `grid-gap` as such:
