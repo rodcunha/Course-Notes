@@ -85,7 +85,12 @@ class ContactList extends React.Component {
 
 A great mindset to have when building React apps is to think in components. Components represent the modularity and reusability of React. You can think of your component classes as factories that produce instances of components. These component classes should follow the single responsibility principle and just "do one thing". If it manages too many different tasks, it may be a good idea to decompose your component into smaller subcomponents.
 
+## Scaffolding the React App
 
+In order to be able to use JSX we will need to transpile the code to JavaScript and therefore need a build tool, the most popular one being Webpack. The nice people at Facebook however have already created a scaffolding platform to start any react app that does all we require to use JSX. To install this we will need to have node installed and to be able to run npm.
 
+### Installing the scaffolding 
+
+`npm install -g create-react-app`
 
 
