@@ -45,7 +45,7 @@ Even though we are unsing JSX on the editor, when compiled the code will still c
 
 JSX must return only a single element. This element may have any number of descendents but there must be just one single root element wrapping all the JSX code. This is usually a `div` or `span` element.
 
-```react
+```javascript
 const message = (
   <div>
     <h1>All About JSX:</h1>
