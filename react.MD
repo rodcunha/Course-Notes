@@ -58,6 +58,34 @@ const message = (
 );
 ```
 
+## Components
+
+Components are one of React's key features and they enable us to create reusable pieces of code that will ultimately be responsible for returning the HTML necessary to render the page. More often than not, these will be written using JSX.
+
+Since React's main focus is to build the app's UI, there is only one method that is absolutely required in a React component.
+
+### Creating a component
+
+```javascript
+class ContactList extends React.Component {
+// ...
+}
+```
+
+### The `render()` method
+
+```javascript
+class ContactList extends React.Component {
+  render() {
+    // some JSX 
+   }
+}
+```
+- [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
+
+A great mindset to have when building React apps is to think in components. Components represent the modularity and reusability of React. You can think of your component classes as factories that produce instances of components. These component classes should follow the single responsibility principle and just "do one thing". If it manages too many different tasks, it may be a good idea to decompose your component into smaller subcomponents.
+
+
 
 
 
