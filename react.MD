@@ -1,6 +1,6 @@
 # Notes on React.js
 
-## The framewoek
+## The framework
 
 React is a declarative framework centered on the V of MVC. React uses mostly javascript to transform a Virtual DOM that will then be used to update the actual DOM.
 
@@ -93,4 +93,18 @@ In order to be able to use JSX we will need to transpile the code to JavaScript 
 
 `npm install -g create-react-app`
 
+### Instantiating a new app
 
+`create-react-app [name of the app]`
+
+### Yarn Package Manager
+
+Once the instantiation of the new app conpletes we are told to use `yarn start` to start the development server. Yarn is a package manager which is in all similar to npm. Yarn was created from the ground up by Facebook to improve on some key aspects that are slow or lacking in NPM.
+
+If we don't want to install Yarn, we don't have to! What's great about it is that almost every use of yarn can be swapped with npm and everything will work just fine! So if the command is `yarn start`, we can use `npm start` to run the same command.
+
+### Create React App Resources
+
+- [GitHub Repo](https://github.com/facebookincubator/create-react-app)
+- [Create React App Release Post](https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html)
+- [Updates to create-react-app from the React blog](https://reactjs.org/blog/2017/05/18/whats-new-in-create-react-app.html)
