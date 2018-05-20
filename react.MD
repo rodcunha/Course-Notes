@@ -32,3 +32,14 @@ Note: when passing a html class property it is worth noting that this should be 
 
 #### When using arrays for elements
 It is important to remember that when creating elements using an array, a unique key property (prop) will be required or else a js error will display in the console.
+
+
+
+## JSX
+
+JSX is a syntax extension in JavaScript that lets us write JS code that looks a lot like HTML making it more concise and easy to follow.
+
+In order to evaluate a JS expression the code needs to be enveloped in curly braces `{expression here}`
+
+
+
