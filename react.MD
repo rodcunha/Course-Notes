@@ -12,7 +12,7 @@ React is a declarative framework centered on the V of MVC. React uses mostly jav
 
 `React.createElement('type', 'prop', 'content')`
 
-This must return a single root element, we would normally use `div` or `span` ti represent that type of element but the content can be another React element.
+This must return a single root element, we would normally use `div` or `span` to represent that type of element but the content can be another React element.
 
 Let's break down what each item can be:
 
@@ -40,6 +40,24 @@ It is important to remember that when creating elements using an array, a unique
 JSX is a syntax extension in JavaScript that lets us write JS code that looks a lot like HTML making it more concise and easy to follow.
 
 In order to evaluate a JS expression the code needs to be enveloped in curly braces `{expression here}`
+
+Even though we are unsing JSX on the editor, when compiled the code will still compile to native JavaScript code.
+
+JSX must return only a single element. This element may have any number of descendents but there must be just one single root element wrapping all the JSX code. This is usually a `div` or `span` element.
+
+```react
+const message = (
+  <div>
+    <h1>All About JSX:</h1>
+    <ul>
+      <li>JSX</li>
+      <li>is</li>
+      <li>awesome!</li>
+    </ul>
+  </div>
+);
+```
+
 
 
 
