@@ -108,3 +108,21 @@ If we don't want to install Yarn, we don't have to! What's great about it is tha
 - [GitHub Repo](https://github.com/facebookincubator/create-react-app)
 - [Create React App Release Post](https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html)
 - [Updates to create-react-app from the React blog](https://reactjs.org/blog/2017/05/18/whats-new-in-create-react-app.html)
+
+## State
+
+State is an object that determines how that particular component renders and behaves. In other words, it is what allows us to have dynamic and interactive components.
+
+#### A quick analogy to explain state
+
+This might seem trivial, but please take a moment to consider this question: What’s the difference between water and ice?
+
+That’s right — the temperature! Now, let's go one level deeper: what is “temperature”? The answer is that it’s a measurement of thermal energy — the key word for us being measurement, because that implies it is tracked with a known value (any number between absolute zero and absolute hot).
+
+If you think about it, that’s kind of incredible. If you can change the value on a thermometer, that means you have the ability to put a piece of matter into a different state. With water, simply put it in your freezer (below 32F) and its state will change from liquid to a solid. If you put it on a hot stovetop (above 212F), its state will change from liquid to gas. All of this can be done just by changing one value: its temperature.
+
+What if we could do the same thing with programs? What if we could define a set of properties that would determine how our program would behave in any situation, similarly to water’s relationship with temperature?
+
+## Other notes
+
+### Where should state live?
