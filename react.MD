@@ -123,6 +123,12 @@ If you think about it, that’s kind of incredible. If you can change the value 
 
 What if we could do the same thing with programs? What if we could define a set of properties that would determine how our program would behave in any situation, similarly to water’s relationship with temperature?
 
+### Building UI State
+
+In order to build an app correctly, we need to identify the minimal amount of state the app will need. For this we will follow the DRY (Don't Repeat Yourself) rule. We need to figure out the absolute minimal representation of state the app requires and compute everything else we need on demand.
+
 ## Other notes
+
+
 
 ### Where should state live?
