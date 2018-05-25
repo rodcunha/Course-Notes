@@ -139,3 +139,5 @@ For each piece of state in the application, we need to:
 - Find a common owner component (a single component above all the components that need the state in the hierarchy).
 - Either the common owner or another component higher up in the hierarchy should own the state.
 - If you can’t find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
+
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html#step-4-identify-where-your-state-should-live)
